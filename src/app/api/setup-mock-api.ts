@@ -3,8 +3,6 @@ import { apiClient } from '@/shared/api/axios'
 import { MOCK_TEACHERS, getMockTeacherStats } from './mock-teachers'
 
 export function setupMockApi() {
-  if (import.meta.env.PROD) return
-
   const defaultAdapter = apiClient.defaults.adapter
   const defaultAdapterFn =
     typeof defaultAdapter === 'function'
